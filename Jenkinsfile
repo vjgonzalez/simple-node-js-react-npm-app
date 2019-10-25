@@ -5,6 +5,9 @@ pipeline {
             args '-p 3002:3000'
         }
     }
+    environment {
+        CI = 'true'
+    }
     triggers {
         pollSCM('*/1 * * * *')
     }
